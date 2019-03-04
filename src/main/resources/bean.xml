@@ -4,29 +4,32 @@
 
 <beans>
 
-    <bean id="movie" class="com.stackroute.domain.Movie"  autowire="constructor">
+    <!--<bean id="movie" class="com.stackroute.domain.Movie"  autowire="constructor">-->
 
+    <!--</bean>-->
+
+    <!--<bean id="actor" class="com.stackroute.domain.Actor">-->
+        <!--<constructor-arg index="0" value="Jhonny Depp"></constructor-arg>-->
+        <!--<constructor-arg index="1" value="male"></constructor-arg>-->
+        <!--<constructor-arg index="2" value="54"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="actor1" class="com.stackroute.domain.Actor">-->
+        <!--<constructor-arg type="String" value="Brad Pitt"></constructor-arg>-->
+        <!--<constructor-arg type="String" value="male"></constructor-arg>-->
+        <!--<constructor-arg type="int" value="50"></constructor-arg>-->
+    <!--</bean>-->
+
+
+    <!--<bean id="actor2" class="com.stackroute.domain.Actor">-->
+        <!--<constructor-arg index="0"  value="Tom Cruise"></constructor-arg>-->
+        <!--<constructor-arg index="1" value="male"></constructor-arg>-->
+        <!--<constructor-arg index="2" value="53"></constructor-arg>-->
+    <!--</bean>-->
+
+    <bean id="beanLifecycle" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
+        <property name="name" value="beanLifecycle"></property>
     </bean>
 
-    <bean id="actor" class="com.stackroute.domain.Actor">
-        <constructor-arg index="0" value="Jhonny Depp"></constructor-arg>
-        <constructor-arg index="1" value="male"></constructor-arg>
-        <constructor-arg index="2" value="54"></constructor-arg>
-    </bean>
-
-    <bean id="actor1" class="com.stackroute.domain.Actor">
-        <constructor-arg type="String" value="Brad Pitt"></constructor-arg>
-        <constructor-arg type="String" value="male"></constructor-arg>
-        <constructor-arg type="int" value="50"></constructor-arg>
-    </bean>
-
-
-    <bean id="actor2" class="com.stackroute.domain.Actor">
-        <constructor-arg index="0"  value="Tom Cruise"></constructor-arg>
-        <constructor-arg index="1" value="male"></constructor-arg>
-        <constructor-arg index="2" value="53"></constructor-arg>
-    </bean>
-
-    <bean id=" BeanLifecycleDemoBean" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
-    </bean>
+    <bean class="com.stackroute.demo.BeanPostProcessorDemoBean"></bean>
 </beans>

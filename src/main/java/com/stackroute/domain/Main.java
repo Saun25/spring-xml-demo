@@ -10,13 +10,11 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
-import java.sql.SQLOutput;
-
 public class Main {
     public static void main(String[] args) {
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
         context.registerShutdownHook();
-        BeanLifecycleDemoBean beanLifecycleDemoBean =(BeanLifecycleDemoBean) context.getBean(" BeanLifecycleDemoBean");
+        BeanLifecycleDemoBean beanLifecycleDemoBean =(BeanLifecycleDemoBean) context.getBean("beanLifecycle");
         beanLifecycleDemoBean.display();
 
 //

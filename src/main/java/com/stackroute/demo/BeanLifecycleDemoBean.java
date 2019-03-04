@@ -4,8 +4,12 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
 public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
+    private String name;
 
-    BeanLifecycleDemoBean(){}
+    public void display(){
+        System.out.println("Bean Lifecycle"+getName());
+    }
+
     public void afterPropertiesSet() throws Exception {
         System.out.println("Properties");
     }
@@ -21,7 +25,11 @@ public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
         System.out.println("Custom Destroy");
     }
 
-    public void display(){
-        System.out.println("Bean Lifecycle");
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
