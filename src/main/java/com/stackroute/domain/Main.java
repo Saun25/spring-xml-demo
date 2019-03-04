@@ -16,7 +16,7 @@ public class Main {
     public static void main(String[] args) {
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
         context.registerShutdownHook();
-        BeanLifecycleDemoBean beanLifecycleDemoBean =(BeanLifecycleDemoBean) context.getBean(" BeanLifecycleDemoBean");
+        BeanLifecycleDemoBean beanLifecycleDemoBean =(BeanLifecycleDemoBean) context.getBean("BeanLifecycleDemoBean");
         beanLifecycleDemoBean.display();
 
 //
