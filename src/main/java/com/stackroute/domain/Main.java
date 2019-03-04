@@ -13,10 +13,9 @@ import java.sql.SQLOutput;
 public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
-        Movie movie=(Movie) context.getBean("movieA");
-       // System.out.println(movie.toString());
-        Movie movie1=(Movie)context.getBean("movieB");
-        System.out.println(movie==movie1);
+        Movie movie=(Movie) context.getBean("movie");
+        System.out.println(movie.toString());
+
 //
 //        ClassPathResource resource = new ClassPathResource("bean.xml");
 //

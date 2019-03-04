@@ -4,8 +4,8 @@
 
 <beans>
 
-    <bean name="movieA,movieB" class="com.stackroute.domain.Movie" scope="prototype">
-        <constructor-arg ref="actor"></constructor-arg>
+    <bean id="movie" class="com.stackroute.domain.Movie"  autowire="constructor">
+
     </bean>
 
     <bean id="actor" class="com.stackroute.domain.Actor">
