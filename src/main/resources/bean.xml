@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+    <bean id="movie" class="com.stackroute.domain.Movie">
+        <property name="actor" ref="actor"></property>
+    </bean>
+
+    <bean id="actor" class="com.stackroute.domain.Actor">
+        <property name="name" value="Jhonny Depp"></property>
+        <property name="age" value="54"></property>
+        <property name="gender" value="male"></property>
+    </bean>
+
+</beans>
